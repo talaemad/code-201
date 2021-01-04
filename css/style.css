@@ -1,0 +1,17 @@
+p {
+    font-size: larger;
+    color: rgb(143, 204, 204);
+    font-style: oblique;
+    text-align: center;
+    margin: 25px 100px ;
+    
+
+}
+body{
+    background-color: rgb(65, 64, 64);
+}
+img{
+    width: 700px;
+    height: 400px;
+    float: right;
+}

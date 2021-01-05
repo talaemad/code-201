@@ -1,11 +1,9 @@
-p {
+.list-iteam {
     font-size: larger;
     color: rgb(143, 204, 204);
     font-style: oblique;
     text-align: center;
     margin: 25px 100px ;
-    
-
 }
 body{
     background-color: rgb(65, 64, 64);
@@ -15,6 +13,13 @@ img{
     height: 400px;
     float: right;
 }
+.list2-iteam {
+    font-size: larger;
+    color: rgb(20, 141, 141);
+    font-style: oblique;
+    text-align: center;
+}
 footer{
-    margin:300px 300px 0px 50px ;
+    margin:200px 200px 0px 50px ;
+    color: rgb(143, 204, 204);
 }

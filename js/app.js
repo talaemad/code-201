@@ -134,8 +134,7 @@ function valNumber(mess){
   else {
     valNumber("no please enter number");
   }
-
-
+  
 }
 
 var arr = ['italy', 'japan', 'korea', 'bali', 'spain', 'palestine'];

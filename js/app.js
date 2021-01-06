@@ -74,8 +74,8 @@ function validation(msg1) {
   }
 }
 
-var num = 21;
-var guessNumber = prompt('guess a number you have 4 trailes');
+var num1 = 21;
+// var guessNumber = prompt('guess a number you have 4 trailes');
 /*
 function numValidation(msg){
   var value1=prompt(msg);
@@ -91,30 +91,52 @@ function numValidation(msg){
 }
 */
 var i;
+var guessNumber;
 for (i = 1; i < 5; i++) {
-  guessNumber = Number(guessNumber);
-  if (guessNumber === num) {
-    alert('Coreect!! its ' + num);
+  guessNumber =valNumber('guess a number you have 4 trailes') ;
+  if (guessNumber == num1) {
+    alert('Coreect!! its ' + num1);
     // console.log('Correct it is!');
     correctAnswer++;
     break;
   }
-  else if (guessNumber < num) {
+  else if (guessNumber < num1) {
     alert('No! Its too low, thats your ' + i + ' time');
   }
-  else if (guessNumber > num) {
+  else if (guessNumber > num1) {
     alert('No! Its too heigh, thats your ' + i + ' time');
   }
   if (i != 4) {
-    guessNumber = prompt('guess a number');
+    guessNumber = valNumber('guess a number ') ;
     // console.log('Not Correct!');
   }
 }
 
 if (i == 5) {
-  alert('The Number is ' + num);
+  alert('The Number is ' + num1);
 }
+ 
+function valNumber(mess){
+  var num = prompt(mess);
+  while (num === undefined || num === null || num === '') {
+    num = prompt(mess);
+  }
+  num = Number(num);
+   
 
+  var value =Number.isInteger(num)  ;
+  
+  if (value ) {
+    
+    return num;
+    
+  }
+  else {
+    valNumber("no please enter number");
+  }
+
+
+}
 
 var arr = ['italy', 'japan', 'korea', 'bali', 'spain', 'palestine'];
 var favCountry = prompt('Give me a name of country you think i want to visit');

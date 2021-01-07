@@ -93,7 +93,7 @@ function numValidation(msg){
 var i;
 var guessNumber;
 for (i = 1; i < 5; i++) {
-  guessNumber =valNumber('guess a number you have 4 trailes') ;
+  guessNumber =valNumber('guess a number') ;
   if (guessNumber == num1) {
     alert('Coreect!! its ' + num1);
     // console.log('Correct it is!');
@@ -106,10 +106,7 @@ for (i = 1; i < 5; i++) {
   else if (guessNumber > num1) {
     alert('No! Its too heigh, thats your ' + i + ' time');
   }
-  if (i != 4) {
-    guessNumber = valNumber('guess a number ') ;
-    // console.log('Not Correct!');
-  }
+  
 }
 
 if (i == 5) {
@@ -117,24 +114,20 @@ if (i == 5) {
 }
  
 function valNumber(mess){
+
   var num = prompt(mess);
   while (num === undefined || num === null || num === '') {
     num = prompt(mess);
   }
   num = Number(num);
-   
-
   var value =Number.isInteger(num)  ;
-  
   if (value ) {
-    
     return num;
-    
   }
   else {
-    valNumber("no please enter number");
+    alert("no please enter a number");
+    valNumber(mess);
   }
-  
 }
 
 var arr = ['italy', 'japan', 'korea', 'bali', 'spain', 'palestine'];
